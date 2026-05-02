@@ -5,6 +5,18 @@ template: splash
 hero:
   title: Hi, 我是 Narcisal
   tagline: 這裡記錄我的日常、工作筆記與生活紀事
+  actions:
+    - text: 日記
+      link: /diary/diary-2026-05-03
+      icon: open-book
+    - text: 工作筆記
+      link: /notes/first-note
+      icon: pencil
+      variant: secondary
+    - text: 紀事
+      link: /events/first-event
+      icon: calendar
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
@@ -14,16 +26,16 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 </div>
 
 <CardGrid>
-  <Card title="日記" icon="open-book">
-    <a href="/diary/diary-2026-05-03">記錄日常生活與心情</a>
+  <Card title="學歷" icon="open-book">
+    就讀某大學資訊工程學系，預計 2027 年畢業。
   </Card>
-  <Card title="工作筆記" icon="pencil">
-    <a href="/notes/first-note">學習與工作相關筆記</a>
-  </Card>
-  <Card title="紀事" icon="calendar">
-    <a href="/events/first-event">重要事件與回憶</a>
+  <Card title="興趣" icon="puzzle">
+    程式開發、網路安全、閱讀、日常記錄。
   </Card>
   <Card title="GitHub" icon="github">
-    <a href="https://github.com/Narcisal" target="_blank">github.com/Narcisal</a>
+    <a href="https://github.com/Narcisal">github.com/Narcisal</a>
+  </Card>
+  <Card title="聯絡我" icon="email">
+    有任何問題歡迎透過 GitHub 聯絡我。
   </Card>
 </CardGrid>
