@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   integrations: [
     starlight({
+      title: 'Narcisal Blog',
 	  components: {
       Header: './src/components/Header.astro',
   	  },
