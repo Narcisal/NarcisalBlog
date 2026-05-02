@@ -1,1 +1,10 @@
-/* 暫時清空，不要覆蓋 --sl-nav-height */
+.hero .action {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.hero .action:hover {
+  background: rgba(255,255,255,0.1);
+}
