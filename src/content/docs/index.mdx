@@ -1,40 +1,29 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Narcisal
+description: 個人部落格
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+  title: Hi, 我是 Narcisal
+  tagline: 這裡記錄我的日常、工作筆記與生活紀事
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 
-## Next steps
+<div style="max-width: 600px; margin: 0 auto 2rem;">
+我是一個喜歡記錄生活的人，這個部落格用來存放我的想法、學習筆記和日常日記。目前就讀資訊相關科系，對程式開發與網路安全有興趣。
+</div>
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+  <Card title="學歷" icon="open-book">
+    就讀某大學資訊工程學系，預計 2027 年畢業。
+  </Card>
+  <Card title="興趣" icon="puzzle">
+    程式開發、網路安全、閱讀、日常記錄。
+  </Card>
+  <Card title="GitHub" icon="github">
+    <a href="https://github.com/Narcisal">github.com/Narcisal</a>
+  </Card>
+  <Card title="聯絡我" icon="email">
+    有任何問題歡迎透過 GitHub 聯絡我。
+  </Card>
 </CardGrid>
