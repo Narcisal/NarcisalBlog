@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+const entries = await getCollection('docs', (entry) =>
+  entry.id.startsWith('diary/') && entry.id !== 'diary/index'
+);
+---
+
+<StarlightPage frontmatter={{ title: '日記', description: '日常生活記錄' }}>
+  <ul>
+    {entries.map((entry) => (
+      <li>
+        <a href={`/${entry.id.replace(/\.md$/, '').replace(/\.mdx$/, '')}/`}>
+          {entry.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</StarlightPage>

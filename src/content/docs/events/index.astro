@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+const entries = await getCollection('docs', (entry) =>
+  entry.id.startsWith('events/') && entry.id !== 'events/index'
+);
+---
+
+<StarlightPage frontmatter={{ title: '紀事', description: '重要事件與回憶' }}>
+  <ul>
+    {entries.map((entry) => (
+      <li>
+        <a href={`/${entry.id.replace(/\.md$/, '').replace(/\.mdx$/, '')}/`}>
+          {entry.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</StarlightPage>
