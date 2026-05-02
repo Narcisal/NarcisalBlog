@@ -3,18 +3,28 @@ import { getCollection } from 'astro:content';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
 const entries = await getCollection('docs', (entry) =>
-  entry.id.startsWith('events/') && entry.id !== 'events/index'
+  entry.id.startsWith('events/') && !entry.id.includes('index')
 );
+
+entries.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 ---
 
-<StarlightPage frontmatter={{ title: '紀事', description: '重要事件與回憶' }}>
-  <ul>
+<StarlightPage frontmatter={{ title: '紀事', template: 'splash' }}>
+  <div style="max-width: 700px; margin: 0 auto; font-family: monospace;">
     {entries.map((entry) => (
-      <li>
-        <a href={`/${entry.id.replace(/\.md$/, '').replace(/\.mdx$/, '')}/`}>
+      <a href={`/${entry.id.replace(/\.(md|mdx)$/, '')}/`} style="display:block; text-decoration:none; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
+        <div style="font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 6px;">
           {entry.data.title}
-        </a>
-      </li>
+        </div>
+        {entry.data.description && (
+          <div style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-bottom: 6px;">
+            {entry.data.description}
+          </div>
+        )}
+        <div style="font-size: 0.8rem; color: rgba(255,255,255,0.3);">
+          {entry.data.date}
+        </div>
+      </a>
     ))}
-  </ul>
+  </div>
 </StarlightPage>

@@ -5,6 +5,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Narcisal Blog',
+      customCss: ['./src/styles/global.css'],
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/Narcisal' },
       ],
