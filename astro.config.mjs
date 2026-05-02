@@ -6,8 +6,9 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Narcisal Blog',
+			description: 'Hello, I am Narcisal. Currently studying CS in NCKU.',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Narcisal' }],
 			sidebar: [
 				{
 					label: 'Guides',
@@ -17,7 +18,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Reference',
+					label: '日記',
 					autogenerate: { directory: 'reference' },
 				},
 			],
