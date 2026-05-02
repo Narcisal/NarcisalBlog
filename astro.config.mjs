@@ -6,7 +6,7 @@ export default defineConfig({
     starlight({
       title: 'Narcisal Blog',
 	  components: {
-      Header: './src/components/Header.astro',
+      customCss: ['./src/styles/global.css'],
   	  },
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/Narcisal' },
