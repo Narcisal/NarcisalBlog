@@ -7,23 +7,23 @@ hero:
   tagline: 這裡記錄我的日常、工作筆記與生活紀事
 ---
 
-import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
 <div style="max-width: 600px; margin: 0 auto 2rem;">
 我是一個喜歡記錄生活的人，這個部落格用來存放我的想法、學習筆記和日常日記。目前就讀資訊相關科系，對程式開發與網路安全有興趣。
 </div>
 
 <CardGrid>
-  <Card title="學歷" icon="open-book">
-    就讀某大學資訊工程學系，預計 2027 年畢業。
+  <Card title="日記" icon="open-book">
+    <a href="/diary/diary-2026-05-03">記錄日常生活與心情</a>
   </Card>
-  <Card title="興趣" icon="puzzle">
-    程式開發、網路安全、閱讀、日常記錄。
+  <Card title="工作筆記" icon="pencil">
+    <a href="/notes/first-note">學習與工作相關筆記</a>
+  </Card>
+  <Card title="紀事" icon="calendar">
+    <a href="/events/first-event">重要事件與回憶</a>
   </Card>
   <Card title="GitHub" icon="github">
-    <a href="https://github.com/Narcisal">github.com/Narcisal</a>
-  </Card>
-  <Card title="聯絡我" icon="email">
-    有任何問題歡迎透過 GitHub 聯絡我。
+    <a href="https://github.com/Narcisal" target="_blank">github.com/Narcisal</a>
   </Card>
 </CardGrid>
