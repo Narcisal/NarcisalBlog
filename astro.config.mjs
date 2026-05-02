@@ -8,13 +8,6 @@ export default defineConfig({
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/Narcisal' },
       ],
-      header: {
-        links: [
-          { label: '日記', href: '/diary/diary-2026-05-03' },
-          { label: '工作筆記', href: '/notes/first-note' },
-          { label: '紀事', href: '/events/first-event' },
-        ],
-      },
       sidebar: [
         { label: '日記', autogenerate: { directory: 'diary' } },
         { label: '工作筆記', autogenerate: { directory: 'notes' } },
