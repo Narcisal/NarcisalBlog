@@ -6,8 +6,7 @@ const entries = await getCollection('docs', (entry) =>
   entry.id.startsWith('diary/') && !entry.id.includes('index')
 );
 
-entries.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
----
+entries.sort((a, b) => b.data.date.toString().localeCompare(a.data.date.toString()));---
 
 <StarlightPage frontmatter={{ title: '日記', template: 'splash' }}>
   <div style="max-width: 700px; margin: 0 auto; font-family: monospace;">
